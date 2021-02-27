@@ -1,0 +1,387 @@
+/* 
+*{    <!--Everything will be set to have 0 margin and 0 padding-->
+	margin: 0;
+	padding: 0;
+}
+*/ 
+
+/*Any link in this page will have this effect*/
+a{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	color: red;
+}
+
+.clr{
+	clear: both;      /*reset the float to a normal block so that the next block will start correctly*/
+}
+
+.box-1 h1{
+	color: tomato;
+	text-align: center;
+}
+
+body{
+	background-color: white;
+	font-family: Arial, Helvetica;
+	line-height: 2em;
+	margin: 0;
+	background-image: url(html_img/instagram.jpg);
+	/*background-attachment: fixed;*/
+	/*background-size: cover;   cover the whole page*/     
+	background-repeat: no-repeat;
+}
+
+
+.menu {
+  float: left;
+  width: 20%;
+ }
+
+.container{
+	width: 70%;
+	margin: auto;
+}
+
+.box-1{
+	color: white;
+	background-color: black;
+	border-right: 5px red solid;
+	border-left: 5px red solid;  /*We also have dotted, dash not just solid*/
+
+	padding: 20px;
+	margin: 50px 10px;
+
+}
+
+
+.box-1 h1{
+	font-family: Tahoma;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 30px;
+	text-decoration: underline;
+	text-transform: lowercase;
+	letter-spacing: 0.2em;
+}
+
+.box-2{
+	border: 5px dotted red ;
+	background-color: lightblue;
+	color: brown;
+	padding: 10px;
+	margin: 50px, 0;
+}
+
+.categories h2{
+	text-align: center;
+	text-transform: uppercase;
+	color: navy; 
+
+}
+
+.categories ul{
+	list-style: none;  /*No more gach dau dong*/
+	list-style-image: url("html_img/sample.jpg");  /*Grap an image and set it to gach dau dong*/
+	list-style: square;
+
+}
+
+.categories li{
+	border-bottom: solid 1px black;
+	padding-bottom: 5px;
+}
+
+.my-form{
+	padding: 20px;
+
+}
+
+.my-form label{
+	display: block;
+}
+
+.my-form input[type="text"], .my-form textarea{ 
+	padding:10px;
+	width: 100%;
+}
+
+.form-group{
+	padding-bottom: 10px;
+}
+
+.button{
+	padding: 10px 15px;
+	background-color: #333;
+	color: white;
+}
+
+.block{
+	float: left;
+	width: 33.3%;
+	border: 2px red solid;
+	background-color: navy;
+	color: white;
+	padding-left: 5px;
+	padding-right: 5px;
+	box-sizing: border-box;
+}
+
+#main-block{
+	float: left;
+	width: 70%;
+	padding: 15px;
+	box-sizing: border-box;
+	background-color: tomato;
+}
+
+
+#sidebar{
+	float: right;
+	width: 30%;
+	padding: 15px;
+	background-color: lightblue;
+	box-sizing: border-box;
+}
+
+.p-box{
+	width: 700px;
+	height: 400px;
+	border: 1px black solid;
+	padding-top: 20px;
+	position: relative;      /*relative so that h1 and h2 will only move inside this box*/
+}
+
+.p-box h1{
+	position: absolute;     /*correspond vs the relative*/
+	top: 70px;
+}
+
+.p-box h2{
+	position: absolute;
+	bottom: 50px;
+	right:0px;
+}
+
+.fix-me{
+	position: fixed;
+	top: 400px;
+}
+
+.my-list li:first-child{
+	background-color: blue;
+}
+
+.my-list li:last-child{
+	background-color: brown;
+}
+
+.my-list li:nth-child(5){    /*eventhough ul is li parent but here we put li:nth-child; */
+	background-color: red;
+}
+
+.my-list li:nth-child(even){    /*eventhough ul is li parent but here we put li:nth-child; */
+	background-color: grey;
+}
+
+.customers{
+	border-collapse: collapse;   /*eliminate all spaces between each tr and each th or td*/
+}
+
+#table_head{
+	background-color: #4CAF50;
+}
+
+#table_head th{
+	text-align: center;
+	border: 1px solid black;
+}
+
+#table_body tr:nth-child(odd){
+	background-color: lightgrey; 
+}
+
+#table_body tr:hover{
+	background-color: grey;
+}
+
+#table_body td{
+	font-family: Arial, sans-serif;
+	text-align: left;
+	border: 1px solid black;
+}
+
+
+/*overflow*/
+.overflow{
+	float: right;
+	width: 300px;
+	height: 200px;
+	overflow: auto;   /*automatically add a scroll bar so that the box will not miss any content*/
+}
+
+/*clearfix*/
+#clearfix{
+	border: 1px solid red;
+	box-sizing: border-box;
+	overflow: auto;  /*always set overflow in the biggest box like <div>*/
+}
+
+#clearfix p{
+	float: left;
+	width: 70%;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+#clearfix img{
+	float: right;
+	width: 30%;
+	height: 300px;
+
+}
+
+#ex_header{
+	background-color: grey;
+	padding: 5px;
+	color: white;
+}
+
+#ex_section{
+	float: right;
+	width: 60%;
+
+}
+
+#ex_aside{
+	float: left;
+	width: 30%;
+}
+
+#ex_aside ul{
+	list-style: none;
+}
+
+#ex_aside li{
+	background-color: lightblue;
+	color: white;
+	font-size: 15px;
+	font-weight:bold ;
+	padding: 5px;
+	margin-bottom: 10px;
+
+}
+
+#ex_aside li:hover{
+	background-color: blue;
+}
+
+#ex_footer{
+	background-color: grey;
+	padding: 20px;
+	color: white;
+
+}
+
+/*Flex Box*/
+
+.flex_container{
+	display: flex;
+	
+	align-items: flex-start;   -> shrink the box a bit len tren 
+	/*
+	align-items: flex-end;     -> shrink the box a bit xuong duoi
+	align-items: center;       -> shrink the box a bit in between 
+	*/  
+
+	
+}
+
+.flex_container div, .flex_container2 div, .flex_container3 div{
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.box1{
+	flex: 2;      /*width ratio 50% */ 
+	order: 2;
+	background-image: url(html_img/gen.jpg);
+	background-size: 100% 100%;
+}
+
+.box2{
+	flex: 1;     /*width ratio 25% */ 
+	order: 1;
+}
+
+.box3{
+	flex: 1;     /*width ratio 25% */ 
+	order: 3;
+}
+
+.flex_container2{
+	display:flex;
+	/*
+	justify-content: flex-start;    like align-items 
+	justify-content: flex-end;		like align-items
+	justify-content: center;		like align-items
+	*/	
+
+	justify-content: space-between;
+	justify-content: space-around;     /*put in some margins vs the white page*/
+}
+
+.boxes{
+	width: 20%;
+}
+
+.flex_container3{
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.boxes2{
+	flex-basis: 15%;
+}
+
+.block_element img{
+	display:block;
+	margin: auto;
+}
+
+/*Hide and display using hover*/
+.hover_ex{
+	border: 1px black solid;
+	display: inline-block;    /*set the div width to content width*/
+}
+
+.hover_ex p{
+	display: none;
+	background-color: lightblue;
+	padding:10px;
+}
+
+.hover_ex:hover p{
+	display: block; 
+}
+
+/*Focus Pseudo*/
+.focus input{
+	width: 150px;
+	transition: width .35s ease-in-out;
+}
+
+.focus input:focus{
+	background-color: red;
+	width: 250px;
+}
+
+/*Pseudo elements*/
+.pseudo_element p::first-line{
+	color: red;
+	text-decoration: underline;
+}
+

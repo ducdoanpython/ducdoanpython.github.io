@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+<style>
+   #website_body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 2em;
+    margin: 0;
+    background: url(html_img/body_background2.jpg) center center no-repeat;
+    background-size: cover;   /*set background-size: cover; to cover the whole body of the page*/
+  }
+
+  #nav-bar a{
+    text-decoration: none;
+    color: red;
+  }
+
+   #nav-bar a:hover{
+    color:white;
+  }
+
+
+  .container{
+    width: 80%;
+    margin: auto;     /*center a block block block(ex: div) element*/
+    font-style: bold;
+    font-family: Tahoma;
+    overflow: hidden;  /*Eliminate the white space between the page & head & nav & section*/
+  }
+
+  #main-header{
+    color: white;
+    background-color: #B8860B;
+    opacity: 1;
+    height: 100px;
+
+  }
+
+  #web-img{
+    float: left;
+    width: 8%;
+    height: 100px;
+    border-radius: 10px;
+  }
+
+
+  #main-header h1{
+    padding-top: 15px;
+    float: right;
+    width: 90%;
+
+  }
+
+  #nav-bar{
+    background-color: black;
+  }
+
+  #nav-bar ul{
+    list-style: none;
+    padding-left: 5px;
+
+  }
+
+  #nav-bar li{
+    display: inline-block;   /*allow the li to change in width and height*/
+    display: inline;
+    padding-right: 50px;
+  }
+
+  #showcase{
+    min-height: 200px;
+    text-align: center;
+    background-image: url(html_img/background.jpg);
+    background-position: center center;
+    background-repeat:no-repeat;
+    color: bisque;
+  }
+
+  #showcase h1{
+    font-size: 25px;
+    padding-top: 65px;
+  }
+
+  .main-block{
+    background-color: cornsilk;
+    float: left;
+    width: 65%;
+    border: 1px cornsilk solid;
+    box-sizing: border-box;
+  }
+
+  .side-block{
+    background-color: skyblue;
+    float: right;
+    width: 30%;
+    border: 1px skyblue solid;
+    box-sizing: border-box;
+  }
+
+  .side-block li{
+    list-style: square;
+  }
+
+  #main-footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  .clr{
+    clear: both;      /*reset the float to a normal block so that the next block will start correctly*/
+  }
+
+  .checkbox-edit{
+    color: goldenrod;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+  }
+
+  .button{
+    width: 70px;
+    background-color: aqua;
+  }
+
+  #contact-sidebar{
+    position: fixed;
+    top: 100px;
+    border: 1px dashed cornsilk;
+    outline: 2px solid brown;
+  }
+
+  #contact-sidebar a{
+    text-decoration: none;
+    color: black;	
+  }
+
+  #contact-sidebar a:hover{
+    color: violet;
+  }
+
+  /*About & Infomation*/
+
+  #info_body{
+    background-image:url(html_img/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+  }
+
+  #info_header{
+    background-color: tan;
+    overflow: hidden;
+    height: 80px;
+    min-width: 100%;
+  }
+
+
+
+  #info_header h1{
+    color: black;
+    text-align: center;
+  }
+
+  #info_nav img{
+    width: 200px ;
+    height: 80px;
+  }
+
+  @media(max-width: 800px){
+    #study_info1 div, #study_info2 div, #study_info3 div{
+      height: 300px;
+      padding: 5px;
+    }
+  }
+
+  @media(min-width: 800px){
+
+    .info_container1, .info_container2, .info_container3{
+      height: 300px;
+      position: relative;
+    }
+
+    #study_info1{
+      display: flex;
+      justify-content: center;
+      width: 70%; 
+      position: absolute;
+      left:10px;    /*neu de left 50px thi khi shrink page tu ben left, box se correspond vs page*/
+    }
+
+    #study_info2{
+      display:flex;
+      width: 70%;
+      position: absolute;
+      top:8px;
+      right: 0px;    /*set right: 0px because the page will shrink from the right. If left: 400px then page ko shrink dc*/
+
+    }
+
+    #study_info3{
+      display: flex;
+      width: 70%;
+      position: absolute;
+      left:190px;
+    }
+
+    #study_info1 div, #study_info2 div, #study_info3 div{
+      padding: 5px;
+    }
+  }
+
+  .images{
+    background-image: url(html_img/dtd.jpg);
+    background-size: 100% 100%;      /*fit the box*/
+    background-position: center center;
+    flex: 1;
+    }
+
+  .images2{
+    background-image: url(html_img/gv.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    flex: 1;
+  }
+
+  .images3{
+    background-image: url(html_img/hsgs.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    flex: 1;
+  }
+
+  .study1, .study2, .study3{
+    flex:1;
+  }
+
+  .study1 a, .study2 a, .study3 a{
+    text-decoration: none;
+    color: red;
+  }
+</style>
+
+<head>
+	<title>My Website</title>
+	<link href="https://fonts.google.com/specimen/Lobster?query=Lob" rel="stylesheet" type="text/css"/>
+	<meta name="description" content="My HTML and CSS website">
+	<meta name="viewport" content="width=device-width, intial-scale=1.0">
+
+</head>
+
+<body id="website_body">
+	<header id="main-header">
+		<img id="web-img" src="html_img/instagram.jpg">
+		<h1>HTML and CSS</h1>
+	</header>
+
+	<nav id="nav-bar">
+		<div class="container">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="mywebsite_about&information.html">About & Information</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<section id="showcase">
+		<div class="container">
+			<div>
+				<h1>Welcome to my website</h1>
+			</div>
+		</div>
+	</section>
+
+	<div class="container">	
+		<h1>Introduction</h1>
+		<section class="main-block">
+			<p>Hi my name is Duc. I'm 18 years old. I am a freshman at Denison University in Ohio. Last semester, I took remote-learning due to the Covid-19 situation. I hope that I could come back to Denison soon and meet all of my peers and professors!</p>
+		</section>
+
+		<aside class="side-block">
+			<ul>
+				<li>Major: Computer Science</li>
+				<li>Sports: Basketball & Soccer</li>
+				<li>Music genres: Rap & Hiphop</li>
+			</ul>	
+	</div>
+	
+	<div class="clr"></div>
+
+	<div class="container">
+		<form>
+			<h2>How many programming languages have you learned?</h2>
+			<div class="checkbox-edit">
+				<input type="checkbox" name="check">
+				<label>Python</label>
+			</div>
+
+			<div class="checkbox-edit">
+				<input type="checkbox" name="check">
+				<label>Java</label>
+			</div>
+			
+			<div class="checkbox-edit">
+				<input type="checkbox" name="check">
+				<label>Java Script</label> 
+			</div>
+				
+			<div class="checkbox-edit">
+				<input type="checkbox" name="check">
+				<label>C/C++</label>
+			</div>
+			
+			<div class="checkbox-edit">	
+				<input type="checkbox" name="check">
+				<label>R</label>
+			</div>
+				
+			<div class="checkbox-edit">
+				<input type="checkbox" name="check">
+				<label>PHP</label>
+			</div>
+		</form>
+	</div>
+
+	<aside id="contact-sidebar">
+		<div class="button">
+			<a class="contact-edit" href="https://www.facebook.com/profile.php?id=100028369741494" target="_blank">Facebook</a>
+		</div>
+		
+		<div class="button">
+			<a class="contact-edit" href="https://www.instagram.com/" target="_blank">Instagram</a>
+		</div>
+	</aside>
+
+	<footer id="main-footer">
+		<h4>Coryright &copy; 2021 My Website</h4>
+	</footer>
+
+</body>
+</html>
